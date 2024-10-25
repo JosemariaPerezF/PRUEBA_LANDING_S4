@@ -90,10 +90,78 @@
         }
         /* Estilo general */
         .info-landing {
-            padding-left: 15vh !important; /* Valor predeterminado para pantallas pequeñas */
+            padding-left: 5vh !important; /* Valor predeterminado para pantallas pequeñas */
+            
         }
         
-        
+                /* CSS para sobrescribir display-1 en pantallas pequeñas */
+        @media (max-width: 576px) {
+            .info-landing{
+                padding-left: 7vh !important;
+                padding-bottom: 10px !important;
+
+            }
+            .display-1 {
+                font-size: 2rem; /* Ajusta el tamaño que prefieras */
+            }
+            .titulo-cabecera{
+                font-size: 1rem !important;
+                margin-top: -15px !important;
+            }
+            .lista-detalles{
+                flex-direction: column;
+                align-items: flex-start !important;
+                justify-content: flex-start;
+                gap: 8px;
+            }
+            .titulo-detalle{
+                font-size: 1rem !important;
+                display: none;
+            }
+            .mensaje-video{
+                max-width: 300px;
+                margin-right: 0 !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                margin-left: 0px !important;
+            }
+            .fs-4{
+                font-size: 1rem !important;
+            }
+            .texto-celular{
+                font-size: 1rem !important;
+            }
+            .info-seccion{
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+            .contenedor-info-seccion{
+                margin-left: 2px !important;
+                margin-right: 2px !important;
+                padding-left: 6px !important;
+                padding-right: 6px !important;
+                padding-top: 15px !important;
+                padding-bottom: 15px !important;
+            }
+            .frase-primera-franja{
+                font-size: 1rem !important;
+            }
+            .titulo h2{
+                font-size: 2vh !important;
+                margin-top: 20px !important;
+            }
+            .imagen-seccion{
+                margin-bottom: 15px !important;
+                justify-content: center;
+                justify-items: center;
+            }
+            .div-boton-agenda{
+                width: 100% !important;
+                padding: 0px !important;
+                margin-top: -20px !important;
+                margin-bottom: 10px !important;
+            }
+        }
 
         /* Tablets (pantallas mayores a 768px) */
         @media (min-width: 768px) {
@@ -162,12 +230,12 @@
     </div>
     <div class="d-flex d-md-none justify-content-between align-items-center p-3">
         <div class="d-flex align-items-center">
-            <img src="fotos/logos4.png" alt="Logo de S4 Consultoría" style="width: 150px; height: auto;">
+            <img src="fotos/logos4.png" alt="Logo de S4 Consultoría" style="width: 120px; height: auto;">
         </div>
         <div>
-            <button class="btn rounded-pill px-3 py-2 d-flex align-items-center" style="background-color: #A77D39; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);" onclick="window.open('https://wa.me/5113958013?text=Hola,%20quiero%20tomar%20acción%20hoy%20por%20mi%20conciencia%20financiera%20y%20deseo%20más%20información%20sobre%20INVERSIONES%20360', '_blank');">
+            <button class="btn rounded-pill px-3 py-2 d-flex align-items-center ms-" style="background-color: #A77D39; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);" onclick="window.open('https://wa.me/5113958013?text=Hola,%20quiero%20tomar%20acción%20hoy%20por%20mi%20conciencia%20financiera%20y%20deseo%20más%20información%20sobre%20INVERSIONES%20360', '_blank');">
                 <i class="fab fa-whatsapp me-2"></i> 
-                <span class="fs-6">CONTACTA UN ASESOR</span>
+                <span style="font-size: 8px;">CONTACTA UN ASESOR</span>
             </button>  
         </div>
     </div>
@@ -180,11 +248,11 @@
 
 <div class="row landing-principal align-items-center"  style="min-height: 90vh;" > <!--style="height: 90vh;"-->
     <div class="col-lg-8 col-md-6 col-sm-12 info-landing text-white p-5" style="font-family: Sofia Pro Medium !important; padding-right: 0px  !important;">
-        <h1 class="fs-3 fw-bold">CONFERENCIA MAGISTRAL</h1>
+        <h1 class="fs-3 fw-bold titulo-cabecera">CONFERENCIA MAGISTRAL</h1>
         <h1 class="display-1 fw-bold">INVERSIONES 360°</h1>
-        <h2 class="fs-4">PRIMERA EDICIÓN 2024 EN PERÚ - HOTEL SAN AGUSTÍN</h2>
+        <h2 class="fs-4 titulo-detalle">PRIMERA EDICIÓN 2024 EN PERÚ - HOTEL SAN AGUSTÍN</h2>
     
-        <ul class="list-unstyled d-flex align-items-center flex-wrap">
+        <ul class="list-unstyled d-flex align-items-center flex-wrap lista-detalles">
             <li class="me-3 mr-4" >
                 <i class="fas fa-calendar-day me-1" style="font-size: 1.5rem;"></i>
                 17 de Diciembre
@@ -210,7 +278,7 @@
         </button>
         
 
-        <div class="mensaje-video text-white py-4 px-2 rounded border border-white text-center mx-auto" style="background-color: rgba(77, 77, 77, 0.296); margin-top: 20px; margin-right: 40px !important;">
+        <div class="text-white py-4 px-2 rounded border border-white text-center mx-auto nw mensaje-video" style="background-color: rgba(77, 77, 77, 0.296); margin-top: 20px; margin-right: 40px !important;">
             <strong>Inversión desde S/. 92.00.</strong>
             <div class="px-4">
                 Primera conferencia de concientización financiera con el objetivo de llegar a toda la sociedad peruana.
@@ -236,7 +304,7 @@
 
 
 <div class="d-flex text-center justify-content-center align-items-center primera-franja" style="background-color: #F4EFE7;">
-    <h3 class="p-4 fw-bolder">Crearás y transformarás tu conciencia financiera para tomar <br>
+    <h3 class="p-4 fw-bolder frase-primera-franja">Crearás y transformarás tu conciencia financiera para tomar <br>
         buenas decisiones y mejores inversiones
     </h3>
 </div>
@@ -247,7 +315,7 @@
             ¿A QUIÉN ESTÁ DIRIGIDO?
         </h2>        
     </div>
-    <div class="row p-5 shadow-lg d-flex align-items-stretch" style="background-color: #E7EAED; border-radius: 2rem;">
+    <div class="row p-5 shadow-lg d-flex align-items-stretch contenedor-info-seccion" style="background-color: #E7EAED; border-radius: 2rem;">
         <div class="col-lg-5 col-md-6 col-sm-12 imagen-seccion d-flex">
             <img src="fotos/img_paraquien.png" class="img-fluid rounded-3 align-self-stretch pb-2" alt="Imagen del Expositor 1" style="object-fit: cover; width: 100%;">
         </div>
@@ -290,16 +358,16 @@
             AGENDA DEL EVENTO
         </h2>        
     </div>
-    <div class="row p-5 shadow-lg"; style="background-color: #E7EAED; border-radius: 2rem;">
+    <div class="row p-5 shadow-lg contenedor-info-seccion"; style="background-color: #E7EAED; border-radius: 2rem;">
         <div class="col-lg-6 col-md-6 col-sm-12 imagen-seccion">
-            <p class="col-11 fs-3 fw-bold d-flex justify-content-center mb-1"> INVERSIÓN DESDE - S/.92.00</p>
+            <p class="col-11 fs-3 fw-bold d-flex justify-content-center mb-1 texto-celular"> INVERSIÓN DESDE - S/.92.00</p>
             <p class="col-11 fs-6 d-flex justify-content-start fw-ligther mt-1">
                 <em>Descuentos por grupos*</em>
             </p>
             <div class="col-11 fs-5 bg-white shadow-lg"  style="border-radius: 2rem; margin-right: 20px !important; margin-bottom: 30px !important;">
-                <ul class="list-unstyled p-4">
+                <ul class="list-unstyled p-4 texto-celular">
                     <li class="mb-3">
-                        <i class="fas fa-calendar-day me-1" style="font-size: 1.5rem;"></i>
+                        <i class="fas fa-calendar-day me-1 " style="font-size: 1.5rem;"></i>
                         17 de Diciembre
                     </li>
                     <li class="mb-3">
@@ -312,11 +380,11 @@
                     </li>
                   </ul>
             </div>
-            <p class="col-11 fw-bold fs-6 text-center mt-2 mb-5">
+            <p class="col-11 fw-bold fs-6 text-center mt-2 mb-5 texto-celular">
                 Respaldo de satisfacción: Si luego del evento crees 
                 que no te resultó útil, te devolvemos la inversión.
             </p>
-            <div class="col-11 d-flex justify-content-center mt-4">
+            <div class="col-11 d-flex justify-content-center mt-4 div-boton-agenda">
                 <button class="btn rounded-pill px-4 py-2 shadow d-flex flex-row align-items-center" style="background-color: #104164; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8) !important;" onclick="window.open('https://www.passline.com/eventos/conferencia-de-expertos-inversiones-360', '_blank');">
                     <div class="fw-bold fs-3 d-flex align-items-center">
                         <i class="fas fa-ticket-alt me-3"></i>
@@ -341,7 +409,7 @@
             POR QUÉ ASISTIR A ESTA CONFERENCIA
         </h2>        
     </div>
-    <div class="row p-5 shadow-lg d-flex align-items-stretch"; style="background-color: #E7EAED; border-radius: 2rem;">
+    <div class="row p-5 shadow-lg d-flex align-items-stretch contenedor-info-seccion"; style="background-color: #E7EAED; border-radius: 2rem;">
         <div class="col-lg-5 col-md-6 col-sm-12 imagen-seccion">
             <img src="fotos/pexels-yankrukov-7693199.jpg" class="img-fluid rounded-3 align-self-stretch pb-4" alt="Imagen del Expositor 1" style="object-fit: cover; height: auto; max-height: 500px; width: 100%;">
         </div>
