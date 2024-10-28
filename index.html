@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CONFERENCIA 360°</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+
+        @font-face {
+            font-family: "Sofia Pro Medium";
+            src: url("https://db.onlinewebfonts.com/t/b11a10b450aefd4d399fb070f7c94bae.eot");
+            src: url("https://db.onlinewebfonts.com/t/b11a10b450aefd4d399fb070f7c94bae.eot?#iefix") format("embedded-opentype"),
+                url("https://db.onlinewebfonts.com/t/b11a10b450aefd4d399fb070f7c94bae.woff2") format("woff2"),
+                url("https://db.onlinewebfonts.com/t/b11a10b450aefd4d399fb070f7c94bae.woff") format("woff"),
+                url("https://db.onlinewebfonts.com/t/b11a10b450aefd4d399fb070f7c94bae.ttf") format("truetype"),
+                url("https://db.onlinewebfonts.com/t/b11a10b450aefd4d399fb070f7c94bae.svg#Sofia Pro Medium") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+        font-family: "Sofia Pro Bold";
+        src: url("https://db.onlinewebfonts.com/t/2bddd8cacbb264e5533b00d2513b6ebc.eot");
+        src: url("https://db.onlinewebfonts.com/t/2bddd8cacbb264e5533b00d2513b6ebc.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/2bddd8cacbb264e5533b00d2513b6ebc.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/2bddd8cacbb264e5533b00d2513b6ebc.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/2bddd8cacbb264e5533b00d2513b6ebc.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/2bddd8cacbb264e5533b00d2513b6ebc.svg#Sofia Pro Bold")format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+            @font-face {
+            font-family: "Sofia Pro";
+            src: url("https://db.onlinewebfonts.com/t/a1f486ff14cc5c4f87a0e3825d152372.eot");
+            src: url("https://db.onlinewebfonts.com/t/a1f486ff14cc5c4f87a0e3825d152372.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/a1f486ff14cc5c4f87a0e3825d152372.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/a1f486ff14cc5c4f87a0e3825d152372.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/a1f486ff14cc5c4f87a0e3825d152372.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/a1f486ff14cc5c4f87a0e3825d152372.svg#Sofia Pro")format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Sofia Pro' !important;
+        }
+        .landing-principal{
+            background-image: url("fotos/FONDO.jpg");
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        .whatsapp-fijo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366; 
+            color: white;
+            font-size: 40px; /* Ajustar el tamaño del ícono */
+            padding: 15px;
+            border-radius: 50%; /* Asegura que sea completamente circular */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: center;
+            width: 70px; /* Ajustar el ancho del botón */
+            height: 70px; /* Ajustar la altura del botón */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+        }
+        .whatsapp-fijo i {
+            font-size: 30px; /* Aumentar el tamaño del ícono dentro del círculo */
+        }
+
+        .whatsapp-fijo:hover {
+            background-color: #128C7E; /* Color más oscuro al hacer hover */
+            color: white;
+            text-decoration: none;
+        }
+        body, p, h1, h2, h3, h4, h5, h6, div, span, a, li, ul, ol {
+            font-family: 'Sofia Pro Medium', sans-serif !important;
+        }
+        /* Estilo general */
+        .info-landing {
+            padding-left: 5vh !important; /* Valor predeterminado para pantallas pequeñas */
+            
+        }
+        
+                /* CSS para sobrescribir display-1 en pantallas pequeñas */
+        @media (max-width: 576px) {
+            .info-landing{
+                padding-left: 7vh !important;
+                padding-bottom: 10px !important;
+
+            }
+            .display-1 {
+                font-size: 2rem; /* Ajusta el tamaño que prefieras */
+            }
+            .titulo-cabecera{
+                font-size: 1rem !important;
+                margin-top: -15px !important;
+            }
+            .lista-detalles{
+                flex-direction: column;
+                align-items: flex-start !important;
+                justify-content: flex-start;
+                gap: 8px;
+            }
+            .titulo-detalle{
+                font-size: 1rem !important;
+                display: none;
+            }
+            .mensaje-video{
+                max-width: 300px;
+                margin-right: 0 !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                margin-left: 0px !important;
+            }
+            .fs-4{
+                font-size: 1rem !important;
+            }
+            .texto-celular{
+                font-size: 1rem !important;
+            }
+            .info-seccion{
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+            .contenedor-info-seccion{
+                margin-left: 2px !important;
+                margin-right: 2px !important;
+                padding-left: 6px !important;
+                padding-right: 6px !important;
+                padding-top: 15px !important;
+                padding-bottom: 15px !important;
+            }
+            .frase-primera-franja{
+                font-size: 1rem !important;
+            }
+            .titulo h2{
+                font-size: 2vh !important;
+                margin-top: 20px !important;
+            }
+            .imagen-seccion{
+                margin-bottom: 15px !important;
+                justify-content: center;
+                justify-items: center;
+            }
+            .div-boton-agenda{
+                width: 100% !important;
+                padding: 0px !important;
+                margin-top: -20px !important;
+                margin-bottom: 10px !important;
+            }
+        }
+
+        /* Tablets (pantallas mayores a 768px) */
+        @media (min-width: 768px) {
+            .info-landing {
+            padding-left: calc(100vw / 5); /* Un quinto del ancho para tablets */
+            }
+        }
+
+        /* Pantallas medianas (mayores a 992px) */
+        @media (min-width: 992px) {
+            .info-landing {
+            padding-left: 90px !important; /* Un cuarto del ancho para pantallas medianas */
+            }
+        }
+
+        /* Pantallas grandes (mayores a 1200px) */
+        @media (min-width: 1200px) {
+            .info-landing {
+            padding-left: 30vh !important; /* Un tercio del ancho para pantallas grandes */
+            }
+            .video-conferencia{
+                padding-right: 25vh !important;
+            }
+        }
+    </style>
+
+<header style="font-family: Sofia Pro Medium !important; max-height: 15vh;">
+    <div class="d-none d-md-flex align-items-center justify-content-between">
+        <div class="fw-bold fs-6 d-flex align-items-center me-3 ml-3 lh-1 text-center">
+            AUSPICIADOR <br>
+            PLATINIUM
+        </div>
+        <div class="d-flex align-items-center me-2">
+            <img src="fotos/logos4.png" alt="Logo de S4 Consultoría" style="width: 220px; height: auto;">
+        </div>
+        <div class="d-none col-lg-4 d-lg-block d-flex align-items-center fw-bold fs-5 text-center mx-auto" style="text-transform: uppercase;">
+            El <span style="color: red;">precio de preventa</span> termina este martes 
+            08 de noviembre a la media noche
+        </div>
+        <div class="contador d-flex gap-2 me-5">
+            <div class="cuadro d-flex flex-column justify-content-center align-items-center rounded shadow" style="width: 7vh; height: 7vh; background-color: #A77D39;">
+                <span class="fw-bold fs-2 text-white" id="days">00</span>
+                <small class="text-white"  style="margin-top: -10px !important; font-size: 10px;">Días</small>
+            </div>
+            <div class="cuadro d-flex flex-column justify-content-center align-items-center rounded shadow" style="width: 7vh; height: 7vh; background-color: #A77D39;">
+                <span class="fw-bold fs-2 text-white" id="hours">00</span>
+                <small class="text-white" style="margin-top: -10px !important; font-size: 10px;">Horas</small>
+            </div>
+            <div class="cuadro d-flex flex-column justify-content-center align-items-center rounded shadow" style="width: 7vh; height: 7vh; background-color: #A77D39;">
+                <span class="fw-bold fs-2 text-white"  id="minutes">00</span>
+                <small class="text-white"  style="margin-top: -10px !important; font-size: 10px;">Minutos</small>
+            </div>
+            <div class="cuadro d-flex flex-column justify-content-center align-items-center rounded shadow" style="width: 7vh; height: 7vh; background-color: #A77D39;">
+                <span class="fw-bold fs-2 text-white" id="seconds">00</span>
+                <small class="text-white"  style="margin-top: -10px !important; font-size: 10px;">Segundos</small>
+            </div>
+        </div>
+        <div>
+            <button class="btn rounded-pill mt-3 mb-3 px-3 py-2 mr-3 d-flex flex-column align-items-center" style="background-color: #A77D39; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);" onclick="window.open('https://wa.me/5113958013?text=Hola,%20quiero%20tomar%20acción%20hoy%20por%20mi%20conciencia%20financiera%20y%20deseo%20más%20información%20sobre%20INVERSIONES%20360', '_blank');">
+                <div class="fw-bold fs-6 d-flex align-items-center">
+                    <i class="fab fa-whatsapp me-2 fw-bold fs-4"></i> 
+                    <span>CONTACTA UN ASESOR</span>
+                </div>
+            </button>           
+        </div>
+    </div>
+    <div class="d-flex d-md-none justify-content-between align-items-center p-3">
+        <div class="d-flex align-items-center">
+            <img src="fotos/logos4.png" alt="Logo de S4 Consultoría" style="width: 120px; height: auto;">
+        </div>
+        <div>
+            <button class="btn rounded-pill px-3 py-2 d-flex align-items-center ms-" style="background-color: #A77D39; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);" onclick="window.open('https://wa.me/5113958013?text=Hola,%20quiero%20tomar%20acción%20hoy%20por%20mi%20conciencia%20financiera%20y%20deseo%20más%20información%20sobre%20INVERSIONES%20360', '_blank');">
+                <i class="fab fa-whatsapp me-2"></i> 
+                <span style="font-size: 8px;">CONTACTA UN ASESOR</span>
+            </button>  
+        </div>
+    </div>
+</header>
+
+
+<a href="https://wa.me/5113958013?text=Hola,%20quiero%20tomar%20acción%20hoy%20por%20mi%20conciencia%20financiera%20y%20deseo%20más%20información%20sobre%20INVERSIONES%20360" class="whatsapp-fijo" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="row landing-principal align-items-center"  style="min-height: 90vh;" > <!--style="height: 90vh;"-->
+    <div class="col-lg-8 col-md-6 col-sm-12 info-landing text-white p-5" style="font-family: Sofia Pro Medium !important; padding-right: 0px  !important;">
+        <h1 class="fs-3 fw-bold titulo-cabecera">CONFERENCIA MAGISTRAL</h1>
+        <h1 class="display-1 fw-bold">INVERSIONESS 360°</h1>
+        <h2 class="fs-4 titulo-detalle">PRIMERA EDICIÓN 2024 EN PERÚ - HOTEL SAN AGUSTÍN</h2>
+    
+        <ul class="list-unstyled d-flex align-items-center flex-wrap lista-detalles">
+            <li class="me-3 mr-4" >
+                <i class="fas fa-calendar-day me-1" style="font-size: 1.5rem;"></i>
+                17 de Diciembre
+            </li>
+            <li class="me-3 mr-4">
+                 <i class="fas fa-clock me-1" style="font-size: 1.5rem;"></i>
+                 15:00 hrs. A 20:00 hrs.
+            </li>
+            <li>
+                 <i class="fas fa-map-marker-alt me-1" style="font-size: 1.5rem;"></i>
+                Hotel San Agustín, Miraflores
+            </li>
+          </ul>
+
+          <button class="btn rounded-pill px-4 py-2 shadow d-flex flex-row align-items-center" style="background-color: #ffffff; color: #6b4423; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8) !important;" onclick="window.open('https://www.passline.com/eventos/conferencia-de-expertos-inversiones-360', '_blank');">
+            <div class="fw-bold fs-3 d-flex align-items-center">
+                <i class="fas fa-ticket-alt me-3"></i>
+            </div>
+            <div class="d-flex flex-column lh-base">
+                <span class="fw-bold fs-6 pb-1">¡QUIERO SER PARTE!</span>
+                <span style="font-size: 10px;">Únete y transforma tu futuro financiero.</span>
+            </div>
+        </button>
+        
+
+        <div class="text-white py-4 px-2 rounded border border-white text-center mx-auto nw mensaje-video" style="background-color: rgba(77, 77, 77, 0.296); margin-top: 20px; margin-right: 40px !important;">
+            <strong>Inversión desde S/. 92.00.</strong>
+            <div class="px-4">
+                Primera conferencia de concientización financiera con el objetivo de llegar a toda la sociedad peruana.
+                Contenido exclusivo institucional de primera mano.
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="col-lg-4 col-md-6 col-sm-12 video-conferencia p-2">
+        <iframe 
+            src="https://player.vimeo.com/video/1020286996?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+            frameborder="0" 
+            class="w-100" 
+            style="height: 500px; max-height: 500px;" 
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+            title="FINAL PAUTA">
+        </iframe>
+    </div>
+    
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+
+
+<div class="d-flex text-center justify-content-center align-items-center primera-franja" style="background-color: #F4EFE7;">
+    <h3 class="p-4 fw-bolder frase-primera-franja">Crearás y transformarás tu conciencia financiera para tomar <br>
+        buenas decisiones y mejores inversiones
+    </h3>
+</div>
+
+<div class="container">
+    <div class="titulo">
+        <h2 class="display-5 fw-bolder mt-5 mb-3 text-center" style="color: #104164;">
+            ¿A QUIÉN ESTÁ DIRIGIDO?
+        </h2>        
+    </div>
+    <div class="row p-5 shadow-lg d-flex align-items-stretch contenedor-info-seccion" style="background-color: #E7EAED; border-radius: 2rem;">
+        <div class="col-lg-5 col-md-6 col-sm-12 imagen-seccion d-flex">
+            <img src="fotos/img_paraquien.png" class="img-fluid rounded-3 align-self-stretch pb-2" alt="Imagen del Expositor 1" style="object-fit: cover; width: 100%;">
+        </div>
+        <div class="col-lg-7 col-md-6 col-sm-12 info-seccion fs-4 d-flex flex-column justify-content-center h-100" style="color: #104164; padding-left: 40px;">
+            <p class="text-justify">
+                Esta Conferencia está dirigida a todos los peruanos que 
+                quieran comenzar a formar su conciencia financiera y 
+                colaborar en acortar la brecha de falta de preparación 
+                financiera.  
+            </p>
+            <p class="text-justify">
+                Vas a aprender los principales conocimientos de 
+                profesionales acreditados con más de 16 años de experiencia 
+                habiendo trabajado en importantes instituciones bancarias, 
+                fondos de pensiones y privados del país.  
+            </p>
+            <p class="text-justify">
+                Lo que vas a aprender acá cambiará tu forma de ver las 
+                finanzas y tu actitud hacía el éxito. 
+            </p>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <button class="btn rounded-pill px-4 py-2 shadow d-flex flex-row align-items-center" style="background-color: #104164; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8) !important;" onclick="window.open('https://www.passline.com/eventos/conferencia-de-expertos-inversiones-360', '_blank');">
+                <div class="fw-bold fs-3 d-flex align-items-center">
+                    <i class="fas fa-ticket-alt me-3"></i>
+                </div>
+                <div class="d-flex flex-column lh-base">
+                    <span class="fw-bold fs-6 pb-1">¡QUIERO SER PARTE!</span>
+                    <span style="font-size: 10px;">Únete y transforma tu futuro financiero.</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="titulo">
+        <h2 class="display-5 fw-bolder mt-5 mb-3 text-center" style="color: #104164;">
+            AGENDA DEL EVENTO
+        </h2>        
+    </div>
+    <div class="row p-5 shadow-lg contenedor-info-seccion"; style="background-color: #E7EAED; border-radius: 2rem;">
+        <div class="col-lg-6 col-md-6 col-sm-12 imagen-seccion">
+            <p class="col-11 fs-3 fw-bold d-flex justify-content-center mb-1 texto-celular"> INVERSIÓN DESDE - S/.92.00</p>
+            <p class="col-11 fs-6 d-flex justify-content-start fw-ligther mt-1">
+                <em>Descuentos por grupos*</em>
+            </p>
+            <div class="col-11 fs-5 bg-white shadow-lg"  style="border-radius: 2rem; margin-right: 20px !important; margin-bottom: 30px !important;">
+                <ul class="list-unstyled p-4 texto-celular">
+                    <li class="mb-3">
+                        <i class="fas fa-calendar-day me-1 " style="font-size: 1.5rem;"></i>
+                        17 de Diciembre
+                    </li>
+                    <li class="mb-3">
+                         <i class="fas fa-clock me-1" style="font-size: 1.5rem;"></i>
+                         15:00 hrs. A 20:00 hrs.
+                    </li>
+                    <li>
+                         <i class="fas fa-map-marker-alt me-1" style="font-size: 1.7rem;"></i>
+                        Hotel San Agustín, Miraflores
+                    </li>
+                  </ul>
+            </div>
+            <p class="col-11 fw-bold fs-6 text-center mt-2 mb-5 texto-celular">
+                Respaldo de satisfacción: Si luego del evento crees 
+                que no te resultó útil, te devolvemos la inversión.
+            </p>
+            <div class="col-11 d-flex justify-content-center mt-4 div-boton-agenda">
+                <button class="btn rounded-pill px-4 py-2 shadow d-flex flex-row align-items-center" style="background-color: #104164; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8) !important;" onclick="window.open('https://www.passline.com/eventos/conferencia-de-expertos-inversiones-360', '_blank');">
+                    <div class="fw-bold fs-3 d-flex align-items-center">
+                        <i class="fas fa-ticket-alt me-3"></i>
+                    </div>
+                    <div class="d-flex flex-column lh-base">
+                        <span class="fw-bold fs-6 pb-1">¡QUIERO SER PARTE!</span>
+                        <span style="font-size: 10px;">Únete y transforma tu futuro financiero.</span>
+                    </div>
+                </button>
+            </div>
+            
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 info-seccion fs-4 bg-white p-4 shadow-lg"  style="border-radius: 2rem;">
+            <img src="fotos/agenda landing.jpg" class="img-fluid rounded-3" alt="Imagen del Expositor 1" width="100%">               
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="titulo">
+        <h2 class="display-5 fw-bolder mt-5 mb-3 text-center" style="color: #104164;">
+            POR QUÉ ASISTIR A ESTA CONFERENCIA
+        </h2>        
+    </div>
+    <div class="row p-5 shadow-lg d-flex align-items-stretch contenedor-info-seccion"; style="background-color: #E7EAED; border-radius: 2rem;">
+        <div class="col-lg-5 col-md-6 col-sm-12 imagen-seccion">
+            <img src="fotos/pexels-yankrukov-7693199.jpg" class="img-fluid rounded-3 align-self-stretch pb-4" alt="Imagen del Expositor 1" style="object-fit: cover; height: auto; max-height: 500px; width: 100%;">
+        </div>
+        <div class="col-lg-7 col-md-6 col-sm-12 info-seccion fs-4 d-flex flex-column justify-content-center h-100" style="color: #104164;padding-left: 40px;">
+            <p class="fw-bold">
+                En INVERSIONES 360° aprenderás…
+            </p>
+            <ul>
+                <li class="text-justify">
+                    Fundamentos básicos del mundo financiero y lo que 
+                    sucede “detrás de escena”: incentivos, conflictos de 
+                    interés y costos ocultos. 
+                </li>
+                <br>
+                <li class="text-justify">
+                    Principios y estrategias financieras disponibles: 
+                    cuáles puedes implementar tú mismo y cuáles 
+                    deberías delegar. Gestión patrimonial institucional. 
+                </li>
+                <br>
+                <li class="text-justify">
+                    Gestión aspiracional y actitud frente a las decisiones 
+                    de inversión: miedos, ansiedad y la efervescencia del 
+                    mercado.
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <button class="btn rounded-pill px-4 py-2 shadow d-flex flex-row align-items-center" style="background-color: #104164; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8) !important;" onclick="window.open('https://www.passline.com/eventos/conferencia-de-expertos-inversiones-360', '_blank');">
+                <div class="fw-bold fs-3 d-flex align-items-center">
+                    <i class="fas fa-ticket-alt me-3"></i>
+                </div>
+                <div class="d-flex flex-column lh-base">
+                    <span class="fw-bold fs-6 pb-1">¡QUIERO SER PARTE!</span>
+                    <span style="font-size: 10px;">Únete y transforma tu futuro financiero.</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row g-0" style="margin-top: 80px !important; ">
+    <div class="col-lg-3 col-md-6 col-sm-12 px-0">
+        <img src="fotos/KDC (389).jpg" class="img-fluid w-100" style="object-fit: cover; height: 270px;" alt="...">
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 px-0">
+        <img src="fotos/STAND_S4.jpg" class="img-fluid w-100" style="object-fit: cover; height: 270px;" alt="...">
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 px-0">
+        <img src="fotos/KDC (82).jpg" class="img-fluid w-100" style="object-fit: cover; height: 270px;" alt="...">
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 px-0">
+        <img src="fotos/KDC05208.JPG.jpg" class="img-fluid w-100" style="object-fit: cover; height: 270px;" alt="...">
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="titulo">
+        <h2 class="display-5 fw-bolder mt-5 mb-5 text-center" style="color: #104164;">
+            CONOCE A TUS PONENTES
+        </h2>        
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Acerca de Steve Ocampo -->
+    <section class="py-4 py-md-5 px-4 px-md-5" style="background-color: #6D4B14">
+        <div class="row mx-auto" style="max-width: 1000px">
+            <div class="col-9 my-auto col-sm-6 col-md-5 d-flex align-items-end mx-auto">
+                <div>
+                    <img src="fotos/Steve-Ocampo-with-backgound.png" alt="" class="w-100"
+                         style="border-radius: 10px">
+                    <p class="d-flex justify-content-center mt-2 fw-bold fs-2 text-white">Ponente Principal</p>
+                </div>
+            </div>
+            <div class="col-12 my-auto col-md-7 text-white pt-4 pt-md-0 ps-0 ps-md-5 text-justify">
+                <h2 class="fs-1 ff-firasans mb-4 text-center d-flex align-items-center justify-content-center" style="color: #FFDA40;">
+                    Steve Ocampo, CFA
+                        <a href="https://www.linkedin.com/in/steve-og007/" target="_blank" class="linkedin-link ms-3">
+                            <img src="{{ static('images/icon-linkedin.svg') }}" alt="" class="linkedin-image w-100 "
+                                 style="width: 100%; max-width: 45px ">
+                        </a>
+                </h2>
+                <p class="fw-bold fs-5">
+                    Economista, experto en finanzas e inversiones, certificado Chartered Financial Analyst, CFA.
+                </p>
+                <p class="fs-6">
+                    Estuve en el BCP y luego en el nacimiento de Credicorp Capital en el area de gestion de activos, y mas tarde jefe de renta variable y jefe de renta fija para AFP Habitat, luego Gerente de Inversiones y socio marcario de Zest Capital para finalmente encontrar una mision mas grande de querer mejorar el ecosistema financiero y preparar a la sociedad peruana con conocimiento especializado en finanzas e inversiones fundando S4 Consultoria en el 2022.
+                </p>
+                <p class="fs-6">
+                    He gestionado inversiones por hasta 2,500 millones de dolares, habiendo visto en mis 16 anos de experiencia todas las clases de activo tradicional local e internacional asi como alternativos y he podido ayudar a cientos de personas y empresas mediante las asesorias de finanzas e inversiones personalizadas.
+                </p>
+                
+                <div class="d-flex align-items-center mt-4" style="max-width: 450px">
+                    <div style="width: 40%">
+                        <img src="{{ static('images/Logo-esan.png') }}" alt="" class="w-100">
+                    </div>
+                    <div class="ps-5" style="width: 60%">
+                        <img src="{{ static('images/cfa-institute-white.svg') }}" alt="" class="w-100">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 pt-5 text-center text-white px-0">
+                
+
+                <h3 class="fw-medium ff-firasans fs-4 mt-4">
+                    Apariciones en medios
+                </h3>
+        
+    </section>
+
+    <div class="row" style="background-color: #F4EFE7;">
+        <div class="mensaje p-4 text-center mx-auto fw-bold" style="background-color: #C3C0BA; color: #272727; ">
+            <strong>*Invitados sorpresa del ecosistema financiero. </strong> 
+        </div>
+        <div class="titulo">
+            <div class="container d-flex justify-content-center mb-3">
+                <div class="col-md-8">
+                    <h2 class="fs-5 mt-5 text-center" style="color: #104164;">
+                        Descubrirás en sencillo cómo funciona el ecosistema financiero para crear
+                        y fortalecer tu conciencia financiera.
+                    </h2>
+                </div>
+            </div>
+               
+            <h5 class="fs-4 text-center" style="font-family: Sofia Pro Medium !important;">LA PRIMERA CONFERENCIA QUE TIENE COMO OBJETIVO DESARROLLARTE Y BRINDARTE CONOCIMIENTOS INSTITUCIONALES <br> 
+                CON UNA PERSPECTIVA 
+                APTA PARA TODO NIVEL DE EDUCACIÓN.</h5>     
+        </div>
+        <div class="d-flex justify-content-center mt-2 mb-4">
+            <button class="btn rounded-pill mt-3 mb-3 px-3 py-2 mr-3 d-flex flex-column align-items-center" style="background-color: #A77D39; color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);" onclick="window.open('https://wa.me/5113958013?text=Hola,%20quiero%20tomar%20acción%20hoy%20por%20mi%20conciencia%20financiera%20y%20deseo%20más%20información%20sobre%20INVERSIONES%20360', '_blank');">
+                <div class="fw-bold fs-6 d-flex align-items-center">
+                    <i class="fab fa-whatsapp me-2 fw-bold fs-4"></i> 
+                    <span>CONTACTA UN ASESOR</span>
+                </div>
+            </button> 
+        </div>
+    </div>
+
+    <footer class="py-5 px-2 px-md-5" style="background-color: #C3C0BA;">
+       <div class="d-flex flex-row justify-content-center mb-4">
+            <div class="fw-bold fs-6 d-flex align-items-center text-center me-3 ml-3">
+                AUSPICIADOR <br>
+                PLATINIUM
+            </div>
+            <div class="d-flex align-items-center me-3">
+                <img src="fotos/logos4.png" alt="Logo de S4 Consultoría" style="width: 220px; height: auto;">
+            </div>
+       </div>
+        
+        <div class="mx-auto text-center" style="max-width: 1000px;">
+            <h6 class="text-black">
+                © 2024 - S4 Consultoría RUC: 20608690922 - Todos los derechos reservados
+            </h6>
+        </div>
+    </footer>
+    <script>
+        // Fecha objetivo: 8 de noviembre a las 12:00 de la noche
+        const targetDate = new Date('November 8, 2024 00:00:00').getTime();
+    
+        // Obtener los elementos del contador
+        const daysDiv = document.getElementById('days');
+        const hoursDiv = document.getElementById('hours');
+        const minutesDiv = document.getElementById('minutes');
+        const secondsDiv = document.getElementById('seconds');
+    
+        // Función para actualizar el contador regresivo
+        function updateCountdown() {
+            // Fecha y hora actuales
+            const now = new Date().getTime();
+            // Calcular la diferencia entre la fecha objetivo y la actual
+            const timeRemaining = targetDate - now;
+    
+            if (timeRemaining >= 0) {
+                // Calcular días, horas, minutos y segundos restantes
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    
+                // Actualizar el contenido HTML
+                daysDiv.textContent = String(days).padStart(2, '0');
+                hoursDiv.textContent = String(hours).padStart(2, '0');
+                minutesDiv.textContent = String(minutes).padStart(2, '0');
+                secondsDiv.textContent = String(seconds).padStart(2, '0');
+            } else {
+                // Limpiar el intervalo cuando el conteo llegue a cero
+                clearInterval(countdownInterval);
+                // Puedes agregar aquí cualquier acción a realizar cuando termine el conteo
+            }
+        }
+    
+        // Iniciar el contador y actualizar cada segundo
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    
+        // Llamada inicial para mostrar el conteo inmediatamente
+        updateCountdown();
+    </script>
+    
+  </body>
+</html>
